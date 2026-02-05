@@ -210,6 +210,15 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 If you encounter any issues or have questions, please open an issue on GitHub.
 
+## Credits 🎨
+
+Created by **GlitchyInput**
+
+**Follow on socials:**
+- GitHub: [@GlitchyInput](https://github.com/GlitchyInput)
+- Twitter/X: [@GlitchyInput](https://twitter.com/GlitchyInput)
+- Discord: GlitchyInput
+
 ---
 
-**Built with ❤️ for lab management**
+**Built with ❤️ for lab management by GlitchyInput**

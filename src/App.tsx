@@ -120,6 +120,7 @@ function App() {
 
   return (
     <div className="app">
+      <footer className="footer">Built by GlitchyInput</footer>
       <header className="header">
         <h1>Lab Interface</h1>
         <p>Manage your lab devices by IP address</p>
