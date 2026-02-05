@@ -2,13 +2,15 @@
 
 A modern, full-stack web application for managing lab devices by IP address. Add devices with custom names, logos, and easily access them through a beautiful interface. Built with React, TypeScript, Express.js, and SQLite.
 
+**This is a reusable tool** - Clone it, customize it, and use it in your own lab environment. All personal data (images, IP addresses, device data) is stored locally and never uploaded to this repository.
+
 ## Features ✨
 
 - ✅ **Add Devices** - Create lab devices with custom names and IP addresses
 - ✅ **Upload Logos** - Store device logos/images with proper database handling (no size limits)
 - ✅ **Quick Access** - Click any device card to open its IP address in a new tab
 - ✅ **Copy IP** - One-click copy of device IP addresses to clipboard
-- ✅ **Persistent Storage** - All data stored in SQLite database
+- ✅ **Persistent Storage** - All data stored in SQLite database (local only)
 - ✅ **Image Management** - Images stored on server disk, not in localStorage
 - ✅ **Responsive Design** - Works perfectly on desktop and mobile
 - ✅ **Modern UI** - Dark theme with smooth animations and gradients
@@ -147,11 +149,18 @@ The optimized build will be in the `dist/` folder.
 
 ## Database 🗄️
 
-- **SQLite Database**: `lab-devices.db` (auto-created)
+- **SQLite Database**: `lab-devices.db` (auto-created, stored locally)
 - **Stored Data**: Device name, IP address, logo file path, creation timestamp
-- **Image Storage**: `uploads/` directory
+- **Image Storage**: `uploads/` directory (local only)
+- **Privacy**: ✅ Database and uploads are **NOT** tracked by Git (stored locally only)
 
-## Troubleshooting 🔧
+### Local-Only Storage
+
+This project is designed to keep all personal data on your machine:
+- Device IP addresses and names stay on your local database
+- Uploaded images are stored in the `uploads/` folder locally
+- Nothing is synchronized to GitHub - your data remains private
+- The repository contains only the code/template, not your actual devices
 
 ### Port already in use
 If port 3001 or 5173 is already in use, modify the server configuration.
