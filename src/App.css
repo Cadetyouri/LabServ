@@ -281,19 +281,29 @@ body {
 .btn-copy {
   background: rgba(100, 108, 255, 0.3);
   color: #87ceeb;
+  font-weight: 600;
 }
 
 .btn-copy:hover {
   background: rgba(100, 108, 255, 0.5);
 }
 
+.btn-copy:active {
+  transform: scale(0.95);
+}
+
 .btn-delete {
   background: rgba(255, 99, 71, 0.3);
   color: #ff6347;
+  font-weight: 600;
 }
 
 .btn-delete:hover {
   background: rgba(255, 99, 71, 0.5);
+}
+
+.btn-delete:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {

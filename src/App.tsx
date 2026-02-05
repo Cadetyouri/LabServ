@@ -18,8 +18,13 @@ function App() {
     logo: null as File | null,
   });
   const [previewLogo, setPreviewLogo] = useState<string>('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [copyFeedback, setCopyFeedback] = useState<string>('');
+
+  const handleCopyIP = (ip: string) => {
+    navigator.clipboard.writeText(ip);
+    setCopyFeedback('Copied!');
+    setTimeout(() => setCopyFeedback(''), 2000);
+  };
 
   // Fetch devices on mount
   useEffect(() => {
@@ -195,17 +200,21 @@ function App() {
                     <p className="ip-address">IP: <strong>{device.ip}</strong></p>
                     <div className="device-actions">
                       <button
+                        type="button"
                         className="btn-copy"
                         onClick={(e) => {
+                          e.preventDefault();
                           e.stopPropagation();
-                          navigator.clipboard.writeText(device.ip);
+                          handleCopyIP(device.ip);
                         }}
                       >
-                        Copy IP
+                        {copyFeedback ? 'Copied!' : 'Copy IP'}
                       </button>
                       <button
+                        type="button"
                         className="btn-delete"
                         onClick={(e) => {
+                          e.preventDefault();
                           e.stopPropagation();
                           handleDeleteDevice(device.id);
                         }}
