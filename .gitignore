@@ -14,5 +14,12 @@ yarn-error.log*
 *.swp
 *.swo
 *~
+
+# Database and uploads - keep local only
 lab-devices.db
 uploads/
+*.db
+
+# Personal data
+.local/
+.private/
